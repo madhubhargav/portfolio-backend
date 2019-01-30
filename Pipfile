@@ -6,6 +6,8 @@ verify_ssl = true
 [dev-packages]
 pylint = "*"
 ipdb = "*"
+pylint-django = "*"
+httpie = "*"
 
 [packages]
 django = "==2.1.5"
