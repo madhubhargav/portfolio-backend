@@ -1,0 +1,11 @@
+output-format: vscode
+strictness: veryhigh
+max-line-length: 100
+
+uses:
+    - django
+
+pylint:
+  disable:
+    - too-many-ancestors
+    - import-error
