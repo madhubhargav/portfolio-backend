@@ -13,6 +13,8 @@ prospector = {extras = ["with_everything"],version = "*"}
 django = "==2.1.5"
 djangorestframework = "==3.8.2"
 python-dotenv = "*"
+django-phonenumber-field = "*"
+phonenumbers = "*"
 
 [requires]
 python_version = "3.7"

@@ -17,8 +17,16 @@ from django.contrib import admin
 from django.urls import include, path
 
 from people.urls import PEOPLE_ROUTER
+from communications.urls import COMMUNICATIONS_ROUTER
+from utils.routers import ExtendedDefaultRouter
+
+ROUTER = ExtendedDefaultRouter()
+ROUTER.register_routers(
+    COMMUNICATIONS_ROUTER,
+    PEOPLE_ROUTER
+)
 
 urlpatterns = [
-    path('', include(PEOPLE_ROUTER.urls)),
+    path('', include(ROUTER.urls)),
     path('admin/', admin.site.urls),
 ]
