@@ -12,6 +12,7 @@ prospector = {extras = ["with_everything"],version = "*"}
 [packages]
 django = "==2.1.5"
 djangorestframework = "==3.8.2"
+python-dotenv = "*"
 
 [requires]
 python_version = "3.7"
