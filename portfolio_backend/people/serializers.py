@@ -8,6 +8,7 @@ class PeopleSerializer(serializers.HyperlinkedModelSerializer):
         model = People
         fields = (
             'id',
+            'url',
             'first_name',
             'middle_name',
             'last_name',
