@@ -12,5 +12,6 @@ class PeopleSerializer(serializers.HyperlinkedModelSerializer):
             'first_name',
             'middle_name',
             'last_name',
-            'preferred_name'
+            'preferred_name',
+            'communications'
         )
