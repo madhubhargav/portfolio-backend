@@ -16,14 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
-from people.urls import PEOPLE_ROUTER
-from communications.urls import COMMUNICATIONS_ROUTER
+from person.urls import PERSON_ROUTER
+from social.urls import SOCIAL_ROUTER
 from utils.routers import ExtendedDefaultRouter
 
 ROUTER = ExtendedDefaultRouter()
 ROUTER.register_routers(
-    COMMUNICATIONS_ROUTER,
-    PEOPLE_ROUTER
+    SOCIAL_ROUTER,
+    PERSON_ROUTER
 )
 
 urlpatterns = [

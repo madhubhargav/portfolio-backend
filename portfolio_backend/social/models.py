@@ -3,10 +3,10 @@ import uuid
 from django.db import models
 from phonenumber_field.modelfields import PhoneNumberField
 
-from people.models import People
+from person.models import Person
 
 
-class Communications(models.Model):
+class Social(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     phone = PhoneNumberField()
     email = models.EmailField()
@@ -15,7 +15,7 @@ class Communications(models.Model):
     twitter = models.URLField(blank=True)
     facebook = models.URLField(blank=True)
     discord = models.URLField(blank=True)
-    people = models.OneToOneField(People, on_delete=models.CASCADE)
+    person = models.OneToOneField(Person, on_delete=models.CASCADE)
 
     def __str__(self):
         return str(self.id)

@@ -1,13 +1,12 @@
 from rest_framework import serializers
 
-from communications.models import Communications
+from social.models import Social
 
 
-class CommunicationsSerializer(serializers.HyperlinkedModelSerializer):
+class SocialSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
-        model = Communications
+        model = Social
         fields = (
-            'id',
             'phone',
             'email',
             'linkedin',
@@ -15,5 +14,5 @@ class CommunicationsSerializer(serializers.HyperlinkedModelSerializer):
             'twitter',
             'facebook',
             'discord',
-            'people'
+            'person'
         )
