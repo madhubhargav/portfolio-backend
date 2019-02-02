@@ -2,7 +2,7 @@ import uuid
 from django.db import models
 
 
-class People(models.Model):
+class Person(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     first_name = models.CharField(max_length=150)
     middle_name = models.CharField(max_length=150, blank=True)
