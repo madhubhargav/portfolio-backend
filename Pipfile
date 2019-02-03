@@ -4,10 +4,9 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
-ipdb = "*"
 pylint-django = "*"
-httpie = "*"
 prospector = {extras = ["with_everything"],version = "*"}
+ipdb = "*"
 
 [packages]
 django = "==2.1.5"
