@@ -45,7 +45,8 @@ INSTALLED_APPS = [
     'django_filters',
     'social',
     'person',
-    'project'
+    'project',
+    'skill',
 ]
 
 if os.getenv("ENV") == "DEVELOPMENT":
