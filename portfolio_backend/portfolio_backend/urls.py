@@ -21,6 +21,7 @@ from rest_framework_swagger.views import get_swagger_view
 from person.urls import PERSON_ROUTER
 from social.urls import SOCIAL_ROUTER
 from project.urls import PROJECT_ROUTER, PROJECT_DESCRIPTION_ROUTER
+from skill.urls import SKILL_ROUTER, SKILL_CATEGORY_ROUTER
 from utils.routers import ExtendedDefaultRouter
 
 ROUTER = ExtendedDefaultRouter()
@@ -29,6 +30,8 @@ ROUTER.register_routers(
     PERSON_ROUTER,
     PROJECT_ROUTER,
     PROJECT_DESCRIPTION_ROUTER,
+    SKILL_ROUTER,
+    SKILL_CATEGORY_ROUTER,
 )
 
 SCHEMA_VIEW = get_swagger_view(title='Portfolio API')
