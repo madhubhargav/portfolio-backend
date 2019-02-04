@@ -18,12 +18,15 @@ from django.urls import include, path
 
 from person.urls import PERSON_ROUTER
 from social.urls import SOCIAL_ROUTER
+from project.urls import PROJECT_ROUTER, PROJECT_DESCRIPTION_ROUTER
 from utils.routers import ExtendedDefaultRouter
 
 ROUTER = ExtendedDefaultRouter()
 ROUTER.register_routers(
     SOCIAL_ROUTER,
-    PERSON_ROUTER
+    PERSON_ROUTER,
+    PROJECT_ROUTER,
+    PROJECT_DESCRIPTION_ROUTER,
 )
 
 urlpatterns = [
