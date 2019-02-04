@@ -14,6 +14,7 @@ djangorestframework = "==3.8.2"
 python-dotenv = "*"
 django-phonenumber-field = "*"
 phonenumbers = "*"
+django-filter = "*"
 
 [requires]
 python_version = "3.7"
