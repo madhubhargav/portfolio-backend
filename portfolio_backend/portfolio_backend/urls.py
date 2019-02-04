@@ -13,8 +13,10 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from django.conf.urls import url
 from django.contrib import admin
 from django.urls import include, path
+from rest_framework_swagger.views import get_swagger_view
 
 from person.urls import PERSON_ROUTER
 from social.urls import SOCIAL_ROUTER
@@ -29,7 +31,10 @@ ROUTER.register_routers(
     PROJECT_DESCRIPTION_ROUTER,
 )
 
+SCHEMA_VIEW = get_swagger_view(title='Portfolio API')
+
 urlpatterns = [
+    url(r'^swagger$', SCHEMA_VIEW),
     path('', include(ROUTER.urls)),
     path('admin/', admin.site.urls),
 ]
