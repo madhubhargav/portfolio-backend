@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'person',
     'project',
     'skill',
+    'experience',
 ]
 
 if os.getenv("ENV") == "DEVELOPMENT":
