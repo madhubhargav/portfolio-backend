@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "0a269adf82e7cb5f6a5d6d0adf6196e31e542acfa713db57a8edb84d8cc73333"
+            "sha256": "693f52b383c97d21ee2c9df2fc98a6808ec9c030d6e0c11f9a8a4102e51b114b"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -53,6 +53,15 @@
             ],
             "index": "pypi",
             "version": "==3.8.2"
+        },
+        "mysqlclient": {
+            "hashes": [
+                "sha256:425e733b05e359a714d6007c0fc44582be66b63e5a3df0a50949274ae16f4bc6",
+                "sha256:62e4770b6a797b9416bcf70488365b7d6b9c9066878108499c559293bb464380",
+                "sha256:f257d250f2675d0ef99bd318906f3cfc05cef4a2f385ea695ff32a3f04b9f9a7"
+            ],
+            "index": "pypi",
+            "version": "==1.4.2.post1"
         },
         "phonenumbers": {
             "hashes": [
@@ -211,7 +220,6 @@
                 "sha256:6a9496209b76463f1dec126ab928919aaf1f55b38beb9219af3fe202f6bbdd12",
                 "sha256:f69932b1e806b38a7818d9a1e918e5821b685715040b48e59c657b3c7961b742"
             ],
-            "markers": "python_version >= '3.3'",
             "version": "==7.2.0"
         },
         "ipython-genutils": {

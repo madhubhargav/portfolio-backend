@@ -12,10 +12,11 @@ class Social(models.Model):
     email = models.EmailField()
     linkedin = models.URLField()
     github = models.URLField()
-    twitter = models.URLField(blank=True)
-    facebook = models.URLField(blank=True)
-    discord = models.URLField(blank=True)
+    address = models.TextField(max_length=250)
+    twitter = models.URLField(blank=True, null=True)
+    facebook = models.URLField(blank=True, null=True)
+    discord = models.URLField(blank=True, null=True)
     person = models.OneToOneField(Person, on_delete=models.CASCADE)
 
     def __str__(self):
-        return str(self.id)
+        return str(self.email)
