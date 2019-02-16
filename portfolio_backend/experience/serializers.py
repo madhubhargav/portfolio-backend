@@ -3,7 +3,7 @@ from rest_framework import serializers
 from experience.models import Experience, ExperienceDescription
 
 
-class ExperienceDescriptionSerializer(serializers.HyperlinkedModelSerializer):
+class ExperienceDescriptionSerializer(serializers.ModelSerializer):
     class Meta:
         model = ExperienceDescription
         fields = (
@@ -14,7 +14,7 @@ class ExperienceDescriptionSerializer(serializers.HyperlinkedModelSerializer):
         )
 
 
-class ExperienceSerializer(serializers.HyperlinkedModelSerializer):
+class ExperienceSerializer(serializers.ModelSerializer):
     descriptions = ExperienceDescriptionSerializer(
         many=True,
         read_only=True,
@@ -25,7 +25,6 @@ class ExperienceSerializer(serializers.HyperlinkedModelSerializer):
         model = Experience
         fields = (
             'id',
-            'url',
             'person',
             'company_name',
             'location',

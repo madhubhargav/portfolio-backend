@@ -4,6 +4,6 @@ from person.models import Person
 from person.serializers import PersonSerializer
 
 
-class PersonViewSet(viewsets.ModelViewSet):
-    queryset = Person.objects.all().order_by('first_name', 'last_name')
+class PersonViewSet(viewsets.ReadOnlyModelViewSet):
+    queryset = Person.objects.filter(last_name='Pallem')
     serializer_class = PersonSerializer
