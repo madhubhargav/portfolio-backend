@@ -15,6 +15,7 @@ python-dotenv = "*"
 django-phonenumber-field = "*"
 phonenumbers = "*"
 django-filter = "*"
+mysqlclient = "*"
 
 [requires]
 python_version = "3.7"

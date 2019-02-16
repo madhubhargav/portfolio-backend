@@ -15,6 +15,8 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+ENVIRONMENT = os.getenv("ENV")
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -28,9 +30,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static")
 SECRET_KEY = os.getenv("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv("ENV") == "DEVELOPMENT"
+DEBUG = ENVIRONMENT == "DEVELOPMENT"
 
-ALLOWED_HOSTS = ['madhubhargavp.pythonanywhere.com']
+ALLOWED_HOSTS = ['madhubhargavp.pythonanywhere.com', '127.0.0.1']
 
 
 # Application definition
@@ -107,6 +109,16 @@ DATABASES = {
     }
 }
 
+if ENVIRONMENT != "DEVELOPMENT":
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': os.getenv("DB_NAME"),
+            'USER': os.getenv("DB_USER"),
+            'PASSWORD': os.getenv("DB_PASSWORD"),
+            'HOST': os.getenv("DB_HOST"),
+        }
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators

@@ -8,10 +8,10 @@ class Project(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     name = models.CharField(max_length=150)
     start_date = models.DateField()
-    end_date = models.DateField(blank=True)
+    end_date = models.DateField(blank=True, null=True)
     person = models.ForeignKey(Person, on_delete=models.CASCADE)
     academy = models.BooleanField()
-    short_description = models.CharField(max_length=100, blank=True)
+    short_description = models.CharField(max_length=100, blank=True, null=True)
 
     def __str__(self):
         return self.name
@@ -28,4 +28,4 @@ class ProjectDescription(models.Model):
     )
 
     def __str__(self):
-        return str(self.id)
+        return '{0} {1}'.format(self.priority, self.project)
