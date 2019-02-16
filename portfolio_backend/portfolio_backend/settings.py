@@ -50,9 +50,6 @@ INSTALLED_APPS = [
     'experience',
 ]
 
-if os.getenv("ENV") == "DEVELOPMENT":
-    INSTALLED_APPS.append('rest_framework_swagger')
-
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
