@@ -8,6 +8,8 @@ class Person(models.Model):
     middle_name = models.CharField(max_length=150, blank=True)
     last_name = models.CharField(max_length=150)
     preferred_name = models.CharField(max_length=50, blank=True)
+    image_url = models.URLField(blank=True, null=True)
+    description = models.TextField(max_length=500, blank=True, null=True)
 
     def __str__(self):
         return '{0}, {1}'.format(self.last_name, self.first_name)
