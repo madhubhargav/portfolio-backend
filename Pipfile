@@ -9,7 +9,7 @@ prospector = {extras = ["with_everything"],version = "*"}
 ipdb = "*"
 
 [packages]
-django = "==2.1.5"
+django = "==2.2.10"
 djangorestframework = "==3.8.2"
 python-dotenv = "*"
 django-phonenumber-field = "*"
